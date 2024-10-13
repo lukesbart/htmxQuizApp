@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="htmx-config" content='{"selfRequestsOnly":false}' />
+        <meta name="htmx-config" content='{"withCredentials":true}' />
+        <title>htmx Quiz App</title>
+    </head>
+    <body>
+        <h1>htmx Quiz App</h1>
+
+        <div id="quiz">
+            <div
+                hx-get="http://localhost:3000/quizzes"
+                hx-trigger="load"
+                hx-swap="outerHTML"
+                hx-target="this"
+            ></div>
+        </div>
+
+        <script
+            src="https://unpkg.com/htmx.org@2.0.3"
+            integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
